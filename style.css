@@ -1,0 +1,108 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1a, #333333);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+img {
+  width: 200px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 10px #ffeb3b);
+}
+
+h2 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 120px;
+  padding: 10px;
+  border: 2px solid #ffffff33;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  text-align: center;
+  background-color: #ffffff1a;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #ffeb3b;
+  box-shadow: 0 0 10px #ffeb3b;
+}
+
+button {
+  background: linear-gradient(135deg, #ffeb3b, #f57c00);
+  color: #111;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffeb3b;
+}
+
+#result {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffeb3b;
+  margin-top: 25px;
+  text-shadow: 2px 2px 10px #000;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Animação suave para o resultado */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Animação de rotação */
+@keyframes girarDado {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg); /* duas voltas completas */
+  }
+}
+
+img.girando {
+  animation: girarDado 0.8s ease-in-out;
+}
